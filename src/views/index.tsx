@@ -84,7 +84,7 @@ const PeopleView: React.FC<{}> = () => {
   }
 
   const headerContent = person ? person.name : ' May the force be with you!';
-  const isPersonSet = !isEmpty(person) ? true : undefined;
+  const isPersonSet = !isEmpty(person);
   const justify = (count && count > 1) || person || loading || error ? 'space-between' : 'flex-start';
 
   return (
