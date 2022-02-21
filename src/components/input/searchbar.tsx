@@ -27,7 +27,7 @@ const StyledPaper = styled(Paper)`&&{
   padding: 2px 4px;
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 340px;
 }`
 
 interface SearchBarProps {
