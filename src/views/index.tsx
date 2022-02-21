@@ -25,6 +25,7 @@ const Body = styled.div`&&{
 const Header = styled.h1<{ show: boolean }>`&&{
   display: ${({ show }) => show ? 'block' : 'none'};
   font-family: arial;
+  font-size: 24px;
 }`
 
 const AvatarContainer = styled.div`&&{
@@ -90,7 +91,7 @@ const PeopleView: React.FC<{}> = () => {
     <Body>
       <Container md={8} lg={6} item container justifyContent={justify}>
         <AvatarContainer>
-          {isPersonSet && (<StyledAvatar sizes='large'>{getInitials(person)}</StyledAvatar>)}
+          {isPersonSet && (<StyledAvatar sizes='large'>{getInitials(person.name)}</StyledAvatar>)}
           <Header show={(isEmpty(count) && count > 1) || person}>{headerContent}</Header>
           <SearchBar show={!isPersonSet} {...{ onClear, onSearch }} />
         </AvatarContainer>
