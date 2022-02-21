@@ -4,8 +4,9 @@ import { GET_PEOPLE, GET_PEOPLE_BY_NAME } from '../../../query/people.query';
 import { People, Person } from '../types/types';
 import { peopleActionEnum } from './people.actions.enum';
 
+const API_URL = process.env.REACT_APP_API_URL;
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: API_URL,
   cache: new InMemoryCache()
 });
 
